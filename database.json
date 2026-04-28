@@ -1,0 +1,17 @@
+[
+    {
+        "userId": "101",
+        "message": "Bienvenido a nuestra plataforma. Por favor, verifica tu cuenta.",
+        "channel": "email"
+    },
+    {
+        "userId": "99",
+        "message": "Test Postman",
+        "channel": "email"
+    },
+    {
+        "userId": "99",
+        "message": "Test Postman",
+        "channel": "email"
+    }
+]

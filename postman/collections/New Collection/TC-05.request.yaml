@@ -1,0 +1,23 @@
+$kind: http-request
+name: TC-05
+url: http://127.0.0.1:8000/notifications
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });\r
+
+      pm.test(\"Historial tiene elementos\", function () {\r
+
+      \    var jsonData = pm.response.json();\r
+
+      \    pm.expect(jsonData.data).to.be.an('array');\r
+
+      \    pm.expect(jsonData.data.length).to.be.at.least(1);\r
+
+      });"
+    language: text/javascript
+order: 3442117731910473

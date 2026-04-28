@@ -1,0 +1,16 @@
+$kind: http-request
+name: TC-03
+url: http://127.0.0.1:8000/notifications
+method: POST
+body:
+  type: json
+  content: '{"userId": "99", "message": "Error", "channel": "paloma_mensajera"}'
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 422 for invalid channel\", function () {\r
+
+      \    pm.response.to.have.status(422);\r
+
+      });"
+    language: text/javascript
+order: 2996462852878435
